@@ -1,0 +1,8 @@
+{
+  "name": "context-anchor",
+  "description": "Pin critical facts, decisions, and constraints so they survive context compaction in long Claude Code sessions.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Aleksandr Nazarov"
+  }
+}
