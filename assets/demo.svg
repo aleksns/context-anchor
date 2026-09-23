@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="468" viewBox="0 0 880 468" role="img" aria-label="Terminal: two constraints are pinned, the session is compacted, and context-anchor re-injects both constraints">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0d1129"/>
+      <stop offset="1" stop-color="#080c21"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.85" cy="0" r="0.8">
+      <stop offset="0" stop-color="#c084fc" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#c084fc" stop-opacity="0"/>
+    </radialGradient>
+    <style>
+      .t { font-family: ui-monospace, 'SF Mono', 'JetBrains Mono', Menlo, Consolas, monospace; font-size: 14px; }
+      .dim { fill: #7b6f8a; }
+      .txt { fill: #e8e3ee; }
+      .in { fill: #ffffff; }
+      .acc { fill: #c084fc; }
+      .ok { fill: #8ff0c4; }
+      .muted { fill: #a39cb0; }
+    </style>
+  </defs>
+
+  <rect x="0.5" y="0.5" width="879" height="467" rx="14" fill="url(#bg)" stroke="#2a2440"/>
+  <rect x="0.5" y="0.5" width="879" height="467" rx="14" fill="url(#glow)"/>
+
+  <path d="M1 44h878" stroke="#221d36"/>
+  <circle cx="24" cy="22" r="6" fill="#2d2842"/>
+  <circle cx="44" cy="22" r="6" fill="#2d2842"/>
+  <circle cx="64" cy="22" r="6" fill="#2d2842"/>
+  <text x="440" y="27" text-anchor="middle" class="t dim" font-size="12">claude — ~/projects/api</text>
+
+  <text x="28" y="80" class="t"><tspan class="dim">$</tspan><tspan class="in"> claude --plugin-dir ./context-anchor</tspan></text>
+
+  <text x="28" y="118" class="t"><tspan class="acc">&gt;</tspan><tspan class="in"> /context-anchor:pin "don't touch the auth module, it's mid-refactor"</tspan></text>
+  <text x="44" y="140" class="t"><tspan class="ok">Pinned:</tspan><tspan class="txt"> don't touch the auth module, it's mid-refactor</tspan></text>
+
+  <text x="28" y="176" class="t"><tspan class="acc">&gt;</tspan><tspan class="in"> /context-anchor:pin "staging DB is read-only until Friday"</tspan></text>
+  <text x="44" y="198" class="t"><tspan class="ok">Pinned:</tspan><tspan class="txt"> staging DB is read-only until Friday</tspan></text>
+
+  <path d="M28 236h262" stroke="#3a3350" stroke-dasharray="4 5"/>
+  <text x="440" y="240" text-anchor="middle" class="t muted" font-size="12" font-style="italic">3 hours later · context compacted</text>
+  <path d="M590 236h262" stroke="#3a3350" stroke-dasharray="4 5"/>
+
+  <rect x="28" y="266" width="824" height="164" rx="10" fill="#c084fc" fill-opacity="0.07" stroke="#c084fc" stroke-opacity="0.28"/>
+  <rect x="28" y="266" width="3" height="164" rx="1.5" fill="#c084fc"/>
+  <text x="50" y="296" class="t acc" font-size="12" letter-spacing="1">SESSIONSTART HOOK · CONTEXT-ANCHOR</text>
+  <text x="50" y="326" class="t txt">Context was just compacted. These facts/constraints were pinned</text>
+  <text x="50" y="348" class="t txt">earlier in this session and must not be lost or contradicted:</text>
+  <text x="50" y="380" class="t in">- don't touch the auth module, it's mid-refactor</text>
+  <text x="50" y="402" class="t in">- staging DB is read-only until Friday</text>
+</svg>
